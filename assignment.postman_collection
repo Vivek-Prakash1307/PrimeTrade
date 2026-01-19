@@ -1,0 +1,230 @@
+{
+  "info": {
+    "_postman_id": "fac84869-af84-43c3-89a3-9b2c12f67ff2",
+    "name": "PrimeTrade assignment",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "38343131"
+  },
+  "item": [
+    {
+      "name": "REGISTER USER",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"Vivek\",\r\n  \"email\": \"vivek@test.com\",\r\n  \"password\": \"password123\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/auth/register",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "auth",
+            "register"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "",
+            "value": "",
+            "type": "text",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"email\": \"vivek@test.com\",\r\n  \"password\": \"password123\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/auth/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "auth",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Task",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NmRmYjM3NDJkMTBjNTkwMDllYmZlMSIsImlhdCI6MTc2ODgxNTYyMywiZXhwIjoxNzY4OTAyMDIzfQ.Nc2d6PNcurnymaVMwrnGDYdS6iedJeiHBg8-Cf4j0iA",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"title\": \"Gyarah Gyarah\",\r\n  \"description\": \"Raghav Juyal\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/tasks",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "tasks"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get all tasks",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text",
+            "disabled": true
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NmRmYjM3NDJkMTBjNTkwMDllYmZlMSIsImlhdCI6MTc2ODgxNTYyMywiZXhwIjoxNzY4OTAyMDIzfQ.Nc2d6PNcurnymaVMwrnGDYdS6iedJeiHBg8-Cf4j0iA",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"title\": \"Finish Primetrade assignment\",\r\n  \"description\": \"Backend + Frontend\"\r\n}\r\n"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/tasks",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "tasks"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update tasks",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NmRmYjM3NDJkMTBjNTkwMDllYmZlMSIsImlhdCI6MTc2ODgxNTYyMywiZXhwIjoxNzY4OTAyMDIzfQ.Nc2d6PNcurnymaVMwrnGDYdS6iedJeiHBg8-Cf4j0iA",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"title\": \"Finish Primetrade assignment\",\r\n  \"description\": \"Backend + Frontend\",\r\n  \"status\":\"completed\"\r\n}\r\n"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/tasks/696dfcd442d10c59009ebfe5",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "tasks",
+            "696dfcd442d10c59009ebfe5"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete tasks",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NmRmYjM3NDJkMTBjNTkwMDllYmZlMSIsImlhdCI6MTc2ODgxNTYyMywiZXhwIjoxNzY4OTAyMDIzfQ.Nc2d6PNcurnymaVMwrnGDYdS6iedJeiHBg8-Cf4j0iA",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:5000/api/tasks/696dfe4442d10c59009ebff6",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "tasks",
+            "696dfe4442d10c59009ebff6"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
